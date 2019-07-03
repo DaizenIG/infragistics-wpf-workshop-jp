@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace IgWpfWorkshop.ViewModel
 {
-    class DashboardViewModel: INotifyPropertyChanged
+    public class DashboardViewModel: INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
 

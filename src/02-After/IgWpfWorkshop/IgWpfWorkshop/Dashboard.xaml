@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:IgWpfWorkshop"
         xmlns:vm="clr-namespace:IgWpfWorkshop.ViewModel" xmlns:ig="http://schemas.infragistics.com/xaml" xmlns:Custom="http://infragistics.com/DataPresenter" x:Class="IgWpfWorkshop.Dashboard"
+        xmlns:sdk="clr-namespace:Infragistics.Sdk;assembly=RVUI.WPF"
         mc:Ignorable="d"
         Title="Sales Dashboard in this year" Height="600" Width="1000"
         >
@@ -12,7 +13,10 @@
         <vm:DashboardViewModel/>
     </Window.DataContext>
     <Grid>
-        <ig:XamTileManager>
+        
+        <sdk:RevealView x:Name="revealView1" />
+
+        <!--<ig:XamTileManager>
             <ig:XamTileManager.NormalModeSettings>
                 <ig:NormalModeSettings TileLayoutOrder="UseExplicitRowColumnOnTile"
                                        VerticalTileAreaAlignment="Stretch"
@@ -81,6 +85,6 @@
                 ig:XamTileManager.RowSpan="1" >
                 <ig:XamCategoryChart ChartType="Auto" ItemsSource="{Binding Path=MonthlySalesAmount}" TrendLineType="CubicFit" XAxisInterval="1" Brushes="#FF7446B9 #FF9FB328 #FFF96232 #FF2E9CA6 #FFDC3F76 #FFFF9800 #FF3F51B5 #FF439C47 #FF795548 #FF9A9A9A" Outlines="#FF7446B9 #FF9FB328 #FFF96232 #FF2E9CA6 #FFDC3F76 #FFFF9800 #FF3F51B5 #FF439C47 #FF795548 #FF9A9A9A" MarkerBrushes="#FFFFFFFF" MarkerOutlines="#FF7446B9 #FF9FB328 #FFF96232 #FF2E9CA6 #FFDC3F76 #FFFF9800 #FF3F51B5 #FF439C47 #FF795548 #FF9A9A9A" TrendLineBrushes="#FFF6CE2F #FFF3654D #FF00C6AC #FF38A8E1 #FFB16FC0 #FFE63C53 #FF8AD662 #FF6F72C0" NegativeBrushes="#FFC62828" NegativeOutlines="#FFC62828"  />
             </ig:XamTile>
-        </ig:XamTileManager>
+        </ig:XamTileManager>-->
     </Grid>
 </Window>
